@@ -12,128 +12,33 @@
   --bg-dark:#0d0d0d;
   --card-dark:#111;
   --text-light:#f0f0f0;
-  --glow:#0ff;
 }
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
-body{
-  background:var(--bg-dark);
-  color:var(--text-light);
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-}
-nav{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  padding:15px;
-  background:#111;
-  border-bottom:1px solid var(--neon-blue);
-}
-nav button{
-  background:#111;
-  color:var(--text-light);
-  border:1px solid var(--neon-blue);
-  padding:10px 15px;
-  cursor:pointer;
-  border-radius:6px;
-  transition:0.3s;
-  text-transform:uppercase;
-  font-weight:500;
-  box-shadow:0 0 10px var(--neon-blue);
-}
-nav button:hover{
-  box-shadow:0 0 20px var(--neon-pink);
-  border-color:var(--neon-pink);
-  color:var(--neon-pink);
-}
-.tab{
-  display:none;
-  padding:20px;
-  animation:fadeIn 0.5s ease-in-out;
-}
-.tab.active{
-  display:block;
-}
-@keyframes fadeIn{
-  0%{opacity:0; transform:translateY(20px);}
-  100%{opacity:1; transform:translateY(0);}
-}
-.card{
-  background:var(--card-dark);
-  padding:20px;
-  border-radius:10px;
-  margin-bottom:20px;
-  box-shadow:0 0 15px var(--neon-blue);
-  transition:0.3s;
-}
-.card:hover{
-  box-shadow:0 0 25px var(--neon-pink);
-}
-textarea,input,select,button{
-  background:#111;
-  border:1px solid var(--neon-blue);
-  color:var(--text-light);
-  padding:10px;
-  border-radius:6px;
-  outline:none;
-  width:100%;
-  margin-top:10px;
-}
-textarea:focus,input:focus,select:focus,button:focus{
-  border-color:var(--neon-pink);
-  box-shadow:0 0 15px var(--neon-pink);
-}
-h2{
-  color:var(--neon-blue);
-  margin-bottom:10px;
-}
-h3{
-  color:var(--neon-pink);
-  margin-bottom:5px;
-  font-weight:500;
-}
-.flex-row{
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-}
-.flex-col{
-  flex:1;
-}
-.btn-neon{
-  background:none;
-  border:1px solid var(--neon-pink);
-  color:var(--text-light);
-  padding:10px 15px;
-  cursor:pointer;
-  border-radius:6px;
-  text-transform:uppercase;
-  box-shadow:0 0 10px var(--neon-pink);
-  transition:0.3s;
-}
-.btn-neon:hover{
-  box-shadow:0 0 20px var(--neon-blue);
-  border-color:var(--neon-blue);
-  color:var(--neon-blue);
-}
-.nav-scroll{
-  overflow-x:auto;
-  display:flex;
-}
-::-webkit-scrollbar{
-  height:8px;
-}
-::-webkit-scrollbar-track{
-  background:#111;
-}
-::-webkit-scrollbar-thumb{
-  background:var(--neon-blue);
-  border-radius:4px;
-}
+body{background:var(--bg-dark);color:var(--text-light);min-height:100vh;display:flex;flex-direction:column;}
+nav{display:flex;flex-wrap:wrap;gap:10px;padding:15px;background:#111;border-bottom:1px solid var(--neon-blue);}
+nav button{background:#111;color:var(--text-light);border:1px solid var(--neon-blue);padding:10px 15px;cursor:pointer;border-radius:6px;transition:0.3s;text-transform:uppercase;font-weight:500;box-shadow:0 0 10px var(--neon-blue);}
+nav button:hover{box-shadow:0 0 20px var(--neon-pink);border-color:var(--neon-pink);color:var(--neon-pink);}
+.tab{display:none;padding:20px;animation:fadeIn 0.5s ease-in-out;}
+.tab.active{display:block;}
+@keyframes fadeIn{0%{opacity:0; transform:translateY(20px);}100%{opacity:1; transform:translateY(0);}}
+.card{background:var(--card-dark);padding:20px;border-radius:10px;margin-bottom:20px;box-shadow:0 0 15px var(--neon-blue);transition:0.3s;}
+.card:hover{box-shadow:0 0 25px var(--neon-pink);}
+textarea,input,select,button{background:#111;border:1px solid var(--neon-blue);color:var(--text-light);padding:10px;border-radius:6px;outline:none;width:100%;margin-top:10px;}
+textarea:focus,input:focus,select:focus,button:focus{border-color:var(--neon-pink);box-shadow:0 0 15px var(--neon-pink);}
+h2{color:var(--neon-blue);margin-bottom:10px;}
+h3{color:var(--neon-pink);margin-bottom:5px;font-weight:500;}
+.flex-row{display:flex;gap:20px;flex-wrap:wrap;}
+.flex-col{flex:1;}
+.btn-neon{background:none;border:1px solid var(--neon-pink);color:var(--text-light);padding:10px 15px;cursor:pointer;border-radius:6px;text-transform:uppercase;box-shadow:0 0 10px var(--neon-pink);transition:0.3s;}
+.btn-neon:hover{box-shadow:0 0 20px var(--neon-blue);border-color:var(--neon-blue);color:var(--neon-blue);}
+.nav-scroll{overflow-x:auto;display:flex;}
+::-webkit-scrollbar{height:8px;}
+::-webkit-scrollbar-track{background:#111;}
+::-webkit-scrollbar-thumb{background:var(--neon-blue);border-radius:4px;}
 </style>
 </head>
 <body>
+
 <nav class="nav-scroll">
 <button onclick="openTab('meta')">Meta Tag Tester</button>
 <button onclick="openTab('search')">Search Preview</button>
@@ -141,32 +46,27 @@ h3{
 <button onclick="openTab('sitemap')">Sitemap Validator</button>
 <button onclick="openTab('schema')">Schema Playground</button>
 <button onclick="openTab('score')">SEO Score Dashboard</button>
-<button onclick="openTab('bulk')">Bulk Testing</button>
-<button onclick="openTab('api')">API Access</button>
-<button onclick="openTab('version')">Version Compare</button>
-<button onclick="openTab('security')">Security & Compliance</button>
 <button onclick="openTab('docsuite')">Document Suite</button>
+<button onclick="openTab('newfeature')">New Feature 1</button>
+<button onclick="openTab('newfeature2')">New Feature 2</button>
 </nav>
 
 <!-- CORE TOOLS -->
 <div id="meta" class="tab active">
 <div class="card">
 <h2>Meta Tag Tester</h2>
-<textarea rows="5" placeholder="Paste your HTML snippet here"></textarea>
+<textarea id="meta-input" rows="5" placeholder="Paste your HTML snippet here"></textarea>
 <button class="btn-neon" onclick="testMeta()">Test Meta Tags</button>
-<div id="meta-result"></div>
+<div id="meta-result" style="margin-top:10px;"></div>
 </div>
 </div>
 
 <div id="search" class="tab">
 <div class="card">
 <h2>Search Preview Simulator</h2>
-<textarea rows="3" placeholder="Enter title"></textarea>
-<textarea rows="3" placeholder="Enter meta description"></textarea>
-<div style="margin-top:10px;">
-<button class="btn-neon" onclick="simulateSearch()">Preview Desktop</button>
-<button class="btn-neon" onclick="simulateSearchMobile()">Preview Mobile</button>
-</div>
+<input id="search-title" placeholder="Title"/>
+<textarea id="search-desc" rows="3" placeholder="Meta Description"></textarea>
+<button class="btn-neon" onclick="simulateSearch()">Preview</button>
 <div id="search-result" style="margin-top:10px;"></div>
 </div>
 </div>
@@ -174,9 +74,9 @@ h3{
 <div id="keyword" class="tab">
 <div class="card">
 <h2>Keyword Density Analyzer</h2>
-<textarea rows="6" placeholder="Paste your text here"></textarea>
+<textarea id="keyword-text" rows="6" placeholder="Paste your text"></textarea>
 <button class="btn-neon" onclick="analyzeKeywords()">Analyze</button>
-<div id="keyword-result"></div>
+<div id="keyword-result" style="margin-top:10px;"></div>
 </div>
 </div>
 
@@ -192,9 +92,9 @@ h3{
 <div id="schema" class="tab">
 <div class="card">
 <h2>Schema Playground</h2>
-<textarea rows="10" placeholder="Paste JSON-LD or microdata here"></textarea>
+<textarea id="schema-input" rows="10" placeholder="Paste JSON-LD or Microdata"></textarea>
 <button class="btn-neon" onclick="validateSchema()">Validate Schema</button>
-<div id="schema-result"></div>
+<div id="schema-result" style="margin-top:10px;"></div>
 </div>
 </div>
 
@@ -206,47 +106,24 @@ h3{
 </div>
 </div>
 
-<!-- ADVANCED TOOLS -->
-<div id="bulk" class="tab">
-<div class="card">
-<h2>Bulk Testing</h2>
-<input type="file" id="bulk-file" multiple/>
-<button class="btn-neon" onclick="bulkTest()">Run Bulk SEO Check</button>
-<div id="bulk-result"></div>
-</div>
-</div>
-
-<div id="api" class="tab">
-<div class="card">
-<h2>API Access</h2>
-<p>Programmatic SEO checks integration placeholder</p>
-</div>
-</div>
-
-<div id="version" class="tab">
-<div class="card">
-<h2>Version Comparison</h2>
-<p>Compare old vs new page SEO side by side</p>
-</div>
-</div>
-
-<div id="security" class="tab">
-<div class="card">
-<h2>Security & Compliance Checks</h2>
-<p>Check for unsafe scripts, HTTPS, robots.txt issues</p>
-</div>
-</div>
-
 <!-- DOCUMENT SUITE -->
 <div id="docsuite" class="tab">
 <div class="card">
-<h2>Document Suite</h2>
+<h2>Document Suite PRO</h2>
 <div class="flex-row">
+
 <div class="flex-col card">
 <h3>Document Controller</h3>
 <input type="file" id="doc-upload"/>
 <button class="btn-neon" onclick="parseDoc()">Parse Document</button>
 <div id="doc-result"></div>
+</div>
+
+<div class="flex-col card">
+<h3>Debug Remover</h3>
+<input type="file" id="debug-file"/>
+<button class="btn-neon" onclick="removeDebug()">Remove Debug</button>
+<div id="debug-result"></div>
 </div>
 
 <div class="flex-col card">
@@ -261,13 +138,6 @@ h3{
 <input type="file" id="version-file"/>
 <button class="btn-neon" onclick="autoVersion()">Generate Version</button>
 <div id="version-result"></div>
-</div>
-
-<div class="flex-col card">
-<h3>Debug Remover</h3>
-<input type="file" id="debug-file"/>
-<button class="btn-neon" onclick="removeDebug()">Remove Debug</button>
-<div id="debug-result"></div>
 </div>
 
 <div class="flex-col card">
@@ -287,29 +157,136 @@ h3{
 </div>
 </div>
 
+<!-- NEW FEATURES -->
+<div id="newfeature" class="tab">
+<div class="card">
+<h2>New Feature 1</h2>
+<p>This is a placeholder for new pro feature #1.</p>
+</div>
+</div>
+
+<div id="newfeature2" class="tab">
+<div class="card">
+<h2>New Feature 2</h2>
+<p>This is a placeholder for new pro feature #2.</p>
+</div>
+</div>
+
 <script>
+// Tab switching
 function openTab(id){
 document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
 document.getElementById(id).classList.add('active');
 }
 
-// Placeholder functions
-function testMeta(){document.getElementById('meta-result').innerText="Meta Tags tested (placeholder)";}
-function simulateSearch(){document.getElementById('search-result').innerText="Desktop preview (placeholder)";}
-function simulateSearchMobile(){document.getElementById('search-result').innerText="Mobile preview (placeholder)";}
-function analyzeKeywords(){document.getElementById('keyword-result').innerText="Keyword density analyzed (placeholder)";}
-function validateSitemap(){document.getElementById('sitemap-result').innerText="Sitemap validated (placeholder)";}
-function validateSchema(){document.getElementById('schema-result').innerText="Schema validated (placeholder)";}
-function bulkTest(){document.getElementById('bulk-result').innerText="Bulk SEO test run (placeholder)";}
-function parseDoc(){document.getElementById('doc-result').innerText="Document parsed (placeholder)";}
-function analyzeAIFile(){document.getElementById('ai-result').innerText="AI file analyzed (placeholder)";}
-function autoVersion(){document.getElementById('version-result').innerText="Version generated (placeholder)";}
-function removeDebug(){document.getElementById('debug-result').innerText="Debug removed (placeholder)";}
-function extractMetadata(){document.getElementById('meta-extract').innerText="Metadata extracted (placeholder)";}
-function detectDuplicates(){document.getElementById('dup-result').innerText="Duplicates detected (placeholder)";}
-</script>
+// -----------------------------
+// FILE PROCESSING FUNCTIONS
+// -----------------------------
 
+// Meta Tag Tester
+function testMeta(){
+const input=document.getElementById('meta-input').value;
+document.getElementById('meta-result').innerText="Meta Tags found:\n"+input.match(/<meta[^>]+>/gi);
+}
+
+// Search Preview
+function simulateSearch(){
+const title=document.getElementById('search-title').value;
+const desc=document.getElementById('search-desc').value;
+document.getElementById('search-result').innerText=`Title: ${title}\nDescription: ${desc}`;
+}
+
+// Keyword Density Analyzer
+function analyzeKeywords(){
+const text=document.getElementById('keyword-text').value;
+if(!text){document.getElementById('keyword-result').innerText="No text.";return;}
+const words=text.split(/\s+/);
+let freq={};
+words.forEach(w=>{w=w.toLowerCase().replace(/[^\w]/g,'');if(!freq[w])freq[w]=0;freq[w]++;});
+let output="";
+for(const k in freq) output+=`${k}: ${freq[k]}\n`;
+document.getElementById('keyword-result').innerText=output;
+}
+
+// -----------------------------
+// DOCUMENT SUITE REAL JS
+// -----------------------------
+
+// Parse Document (txt only for demo)
+function parseDoc(){
+const file=document.getElementById('doc-upload').files[0];
+if(!file){alert("Select a file."); return;}
+const reader=new FileReader();
+reader.onload=function(e){
+document.getElementById('doc-result').innerText=e.target.result;
+}
+reader.readAsText(file);
+}
+
+// Remove Debug Statements (console.log, debugger)
+function removeDebug(){
+const file=document.getElementById('debug-file').files[0];
+if(!file){alert("Select a file."); return;}
+const reader=new FileReader();
+reader.onload=function(e){
+let content=e.target.result;
+content=content.replace(/console\.log\(.*?\);?/g,"").replace(/debugger;?/g,"");
+const blob=new Blob([content],{type:"text/plain"});
+const url=URL.createObjectURL(blob);
+const a=document.createElement("a");
+a.href=url;a.download="cleaned_"+file.name;a.click();
+document.getElementById('debug-result').innerText="Debug removed. File ready to download.";
+}
+reader.readAsText(file);
+}
+
+// AI File Analyzer (simulated)
+function analyzeAIFile(){
+const file=document.getElementById('ai-file').files[0];
+if(!file){alert("Select a file."); return;}
+document.getElementById('ai-result').innerText="Analyzing "+file.name+" ... Done (simulated).";
+}
+
+// Auto Versioning
+function autoVersion(){
+const file=document.getElementById('version-file').files[0];
+if(!file){alert("Select a file."); return;}
+document.getElementById('version-result').innerText=file.name+" versioned v1.0 (simulated).";
+}
+
+// Metadata Extractor (txt/json only demo)
+function extractMetadata(){
+const file=document.getElementById('meta-file').files[0];
+if(!file){alert("Select a file."); return;}
+const reader=new FileReader();
+reader.onload=function(e){
+const matches=e.target.result.match(/<meta[^>]+>/gi)||[];
+document.getElementById('meta-extract').innerText="Metadata found:\n"+matches.join("\n");
+}
+reader.readAsText(file);
+}
+
+// Duplicate Detector (simple line duplicates in txt)
+function detectDuplicates(){
+const files=document.getElementById('dup-file').files;
+if(!files.length){alert("Select files."); return;}
+let allContent="";
+Array.from(files).forEach(f=>{
+const reader=new FileReader();
+reader.onload=function(e){
+allContent+=e.target.result+"\n";
+const lines=allContent.split(/\r?\n/);
+const seen={};const dup=[];
+lines.forEach(l=>{if(seen[l])dup.push(l);else seen[l]=1;});
+document.getElementById('dup-result').innerText="Duplicates:\n"+dup.join("\n");
+}
+reader.readAsText(f);
+});
+}
+
+</script>
 </body>
 </html>
+
 
 
